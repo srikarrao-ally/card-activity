@@ -1,4 +1,7 @@
-import './assets/index.css';
+import './index.css';
+import './assets/fonts/Kanit-Light.ttf';
+import './assets/fonts/Kanit-Medium.ttf';
+import './assets/fonts/Kanit-Regular.ttf';
 
 import { Analytics } from '@vercel/analytics/react';
 import { App } from './App';

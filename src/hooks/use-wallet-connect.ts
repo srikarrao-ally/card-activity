@@ -2,7 +2,7 @@ import { useEtherBalance, useEthers, useTokenBalance } from '@usedapp/core';
 
 import { ASSET_LAKE } from '../constants/assets';
 import { JsonRpcProvider } from '@ethersproject/providers';
-import WalletConnectProvider from '@walletconnect/web3-provider/dist/umd/index.min.js';
+import WalletConnectProvider from '@walletconnect/web3-provider';
 import Web3Modal from 'web3modal';
 import { parseBigNumber } from '../utils/parseBigNumber';
 import { useConfig } from './use-config';
@@ -68,7 +68,7 @@ export const useWalletConnect = () => {
             walletconnect: {
                 package: WalletConnectProvider,
                 options: {
-                    infuraId: `${import.meta.env.VITE_INFURA_ID}`,
+                    infuraId: `${process.env.REACT_APP_INFURA_ID}`,
                 },
             },
         };
@@ -132,7 +132,7 @@ export const useWalletConnect = () => {
         tokenBalance: tokenBalanceAsBigNumber
             ? parseBigNumber(tokenBalanceAsBigNumber, ASSET_LAKE.decimals)
             : 0,
-        library,
+        library: library as JsonRpcProvider,
         error: internalState.error || error?.toString() || null,
         activateProvider,
         deactivate: handleDeactivate,

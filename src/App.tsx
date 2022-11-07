@@ -1,5 +1,4 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { Page } from './components/page/Page';
 
 import { Main } from './pages/Main';
 import { Providers } from './Providers';

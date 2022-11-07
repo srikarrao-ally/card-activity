@@ -1,4 +1,4 @@
-const infuraId = import.meta.env.VITE_INFURA_ID;
+const infuraId = process.env.REACT_APP_INFURA_ID;
 
 export const networks = {
     mainnet: {

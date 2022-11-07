@@ -1,10 +1,10 @@
 import { ASSET_LAKE, ASSET_USDC } from '../constants/assets';
 import { BigNumber, Contract } from 'ethers';
 
-import { abi as IUniswapV3PoolABI } from '@uniswap/v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json';
 import { JsonRpcProvider } from '@ethersproject/providers';
 import { Pool } from '@uniswap/v3-sdk';
 import { Token } from '@uniswap/sdk-core';
+import { uniswapV3PoolAbi } from '../abis/uniswapV3Pool';
 import { useConfig } from './use-config';
 
 interface Immutables {
@@ -24,7 +24,7 @@ export const useUniswap = () => {
     const getLakePrice = async (provider: JsonRpcProvider): Promise<number> => {
         const poolContract = new Contract(
             usdcLakePoolAddress,
-            IUniswapV3PoolABI,
+            uniswapV3PoolAbi,
             provider,
         );
 

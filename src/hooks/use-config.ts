@@ -10,7 +10,7 @@ type DappConfig = {
 type SupportedChain = 'mainnet' | 'goerli';
 
 const chain: SupportedChain =
-    import.meta.env.VITE_CHAIN_NAME === 'goerli' ? 'goerli' : 'mainnet';
+    process.env.REACT_APP_CHAIN_NAME === 'goerli' ? 'goerli' : 'mainnet';
 
 export const useConfig = () => {
     const getDappConfig = (): DappConfig => {
@@ -23,10 +23,11 @@ export const useConfig = () => {
     };
     return {
         ...networks[chain],
-        lakeAddress: import.meta.env.VITE_LAKE_ADDRESS,
-        vestingScheduleAddress: import.meta.env.VITE_VESTING_SCHEDULE_ADDRESS,
-        usdcLakePoolAddress: import.meta.env.VITE_USDC_LAKE_POOL_ADDRESS,
-        usdcAddress: import.meta.env.VITE_USDC_ADDRESS,
+        lakeAddress: process.env.REACT_APP_LAKE_ADDRESS || '',
+        vestingScheduleAddress:
+            process.env.REACT_APP_VESTING_SCHEDULE_ADDRESS || '',
+        usdcLakePoolAddress: process.env.REACT_APP_USDC_LAKE_POOL_ADDRESS || '',
+        usdcAddress: process.env.REACT_APP_USDC_ADDRESS || '',
         etherscanBaseURL: `https://api${
             chain === 'goerli' ? '-goerli' : ''
         }.etherscan.io/api`,

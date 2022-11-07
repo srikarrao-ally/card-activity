@@ -20,7 +20,7 @@ export class EtherscanService {
                         module: 'stats',
                         action: 'tokensupply',
                         contractAddress,
-                        apiKey: import.meta.env.VITE_ETHERSCAN_API_KEY,
+                        apiKey: process.env.REACT_APP_ETHERSCAN_API_KEY,
                     },
                 })
             ).data.result,

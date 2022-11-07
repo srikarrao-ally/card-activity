@@ -61,7 +61,7 @@ export const Stats = () => {
                 fetchData(library).catch(console.error);
             }, REFRESH_STATS_INTERVAL);
         }
-    }, []);
+    }, [library]);
 
     const addToMetamask = async () => {
         try {
