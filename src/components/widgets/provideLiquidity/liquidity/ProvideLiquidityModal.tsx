@@ -150,6 +150,7 @@ export const ProvideLiquidityModal = ({
 
     useEffect(() => {
         setSelectedPosition(undefined);
+        setStep(1);
     }, [positions]);
 
     useEffect(() => {
@@ -212,6 +213,7 @@ export const ProvideLiquidityModal = ({
             setIsLiquidityProviding(false);
             setLakeInputValue(0);
             setUsdtInputValue(0);
+            setAreSettingsOpen(false);
             refreshPositions();
         }
     };
