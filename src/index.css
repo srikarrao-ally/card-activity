@@ -20,6 +20,18 @@
     -webkit-text-fill-color: transparent;
 }
 
+.color-failed-gradient {
+    background: linear-gradient(#ec6ca9, #ff5d5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-successful-gradient {
+    background: linear-gradient(#e8adff, #5efc8d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .text-shadow {
     text-shadow: -6px -6px 24px rgba(136, 136, 136, 0.04),
         8px 8px 10px rgba(87, 87, 87, 0.24);

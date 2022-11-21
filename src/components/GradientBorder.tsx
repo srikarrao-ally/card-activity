@@ -8,6 +8,12 @@ export const GradientBorder = styled.div`
         drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 
-export const GradientBorderWithNoShadow = styled.div`
-    background: linear-gradient(${colors.purple['300']}, ${colors.blue['300']});
+export const GradientBorderWithNoShadow = styled.div<{
+    colorFrom?: string;
+    colorTo?: string;
+}>`
+    background: linear-gradient(
+        ${(props) => props.colorFrom || colors.purple['300']},
+        ${(props) => props.colorTo || colors.blue['300']}
+    );
 `;
