@@ -5,7 +5,7 @@ const { lakeAddress } = useConfig();
 
 const testnetStable = process.env.REACT_APP_USDT_ADDRESS
 
-const goerliTokens = [
+export const tokens = [
 
     //Ethereum Mainnet
     {
