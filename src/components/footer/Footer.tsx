@@ -13,8 +13,8 @@ import youtubeIcon from '../../assets/icons/youtube-icon.svg';
 export const Footer = () => {
     const { lakeAddress } = useConfig();
     return (
-        <div className="w-full h-full bg-black-700 rounded-[30px] inset-shadow flex justify-between px-28 items-center">
-            <div className="flex flex-col items-center">
+        <div className="w-full h-full bg-black-700 rounded-[30px] inset-shadow flex justify-between px-4 lg:px-28 items-center">
+            <div className="hidden lg:flex flex-col items-center">
                 <img
                     className="w-[2.5rem] h-[2.5rem]"
                     src={logo}
@@ -31,7 +31,7 @@ export const Footer = () => {
                     ></Button>
                 </CopyToClipboard>
             </div>
-            <div className="flex">
+            <div className="w-[60%] lg:w-auto h-full max-h-[160px] flex flex-wrap lg:flex-nowrap justify-center content-around lg:items-center">
                 <img
                     className="w-[3rem] h-[3rem] mx-4 cursor-pointer hover:scale-105 transition-transform duration-300"
                     src={youtubeIcon}
@@ -88,7 +88,7 @@ export const Footer = () => {
                     }
                 ></img>
             </div>
-            <div className="flex flex-col items-center tracking-[.1em] text-lg font-kanit-light color-gray-gradient text-shadow">
+            <div className="w-[40%] lg:w-auto flex flex-col items-center tracking-[.1em] text-lg font-kanit-light color-gray-gradient text-shadow">
                 <a
                     className="my-1 cursor-pointer"
                     href="mailto:office@data-lake.co"
@@ -104,7 +104,7 @@ export const Footer = () => {
                     COOKIES
                 </Link>
                 <Link
-                    className="my-1 cursor-pointer"
+                    className="my-1 cursor-pointer text-center"
                     to="/privacy-policy"
                     target="_blank"
                     rel="noopener noreferrer"
