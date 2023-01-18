@@ -6,6 +6,7 @@ import { LOADING_DELAY } from '../constants/commons';
 import { Loading } from '../components/loading/Loading';
 import { Menu } from '../components/menu/Menu';
 import { Page } from '../components/page/Page';
+import { ProvideLiquidity } from '../components/subPages/ProvideLiquidity';
 
 export const Main = () => {
     const [isDisclaimerAccepted, setIsDisclaimerAccepted] = useState(false);
@@ -29,7 +30,10 @@ export const Main = () => {
             {isLoading && <Loading />}
             {isDisclaimerAccepted && (
                 <>
-                    <Page>{subPageIndex === 0 && <Dashboard />}</Page>
+                    <Page>
+                        {subPageIndex === 0 && <Dashboard />}{' '}
+                        {subPageIndex === 1 && <ProvideLiquidity />}
+                    </Page>
                     <div className="w-full lg:hidden fixed bottom-0">
                         <Menu
                             subPageIndex={subPageIndex}

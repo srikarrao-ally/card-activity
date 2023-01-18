@@ -1,12 +1,12 @@
 import '../../../../assets/rc-slider.css';
 
-import { ASSET_LAKE, ASSET_USDT } from '../../../../constants/assets';
 import {
     DEFAULT_SLIPPAGE_TOLERANCE,
     DEFAULT_TRANSACTION_DEADLINE,
 } from '../../../../constants/commons';
 import { useContext, useEffect, useState } from 'react';
 
+import { ASSET_LAKE } from '../../../../constants/assets';
 import { Button } from '../../../button/Button';
 import { ButtonWithSpinner } from '../../../button/ButtonWithSpinner';
 import { ClipLoader } from 'react-spinners';
@@ -105,7 +105,7 @@ export const RemoveLiquidityModal = ({
             shouldCloseOnEsc={true}
             onRequestClose={onCloseClick}
         >
-            <div className="flex flex-col">
+            <div className="flex flex-col w-[90vw] lg:w-auto">
                 <div className="flex justify-end items-center mb-6">
                     <span className="text-sm tracking-[.1em] mr-2 text-gray-500">
                         CLOSE
@@ -119,7 +119,7 @@ export const RemoveLiquidityModal = ({
                         ></img>
                     </div>
                 </div>
-                <div className="flex flex-col rounded-[32px] border border-gray-500 p-8 bg-black-800">
+                <div className="flex flex-col rounded-[32px] border border-gray-500 py-8 px-6 lg:px-8 bg-black-800">
                     {isLoading ? (
                         <div className="flex min-w-[20vw] h-[20rem] justify-center items-center">
                             <ClipLoader

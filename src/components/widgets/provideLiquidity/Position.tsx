@@ -60,7 +60,7 @@ export const Position = ({ position, disabled, onClick }: Props) => {
                             <span className="font-kanit-medium font-normal text-sm">
                                 {position.lowerPrice} - {position.upperPrice}
                             </span>
-                            <span>
+                            <span className="hidden lg:block">
                                 {ASSET_LAKE.symbol} PER {position.tokenSymbol}
                             </span>
                         </div>

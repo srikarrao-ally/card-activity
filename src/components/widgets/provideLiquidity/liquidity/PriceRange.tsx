@@ -62,11 +62,14 @@ export const PriceRange = ({
 
     return (
         <div className="flex flex-col w-full">
+            <div className="flex lg:hidden justify-center tracking-[.12em] ml-2 items-center">
+                LAKE / {tokenSymbol}
+            </div>
             <div className="flex w-full justify-between">
                 <div className="tracking-[.12em] flex items-center">
                     LOWER PRICE:
                 </div>
-                <div className="flex items-center mx-4">
+                <div className="flex items-center mx-4 w-full justify-center">
                     <button
                         className="hover:scale-105 cursor-pointer transition-transform duration-300"
                         disabled={
@@ -110,7 +113,7 @@ export const PriceRange = ({
                         />
                     </button>
                 </div>
-                <div className="tracking-[.12em] ml-2 flex items-center">
+                <div className="hidden lg:flex tracking-[.12em] ml-2 items-center">
                     LAKE / {tokenSymbol}
                 </div>
             </div>
@@ -118,7 +121,7 @@ export const PriceRange = ({
                 <div className="tracking-[.12em] flex items-center">
                     UPPER PRICE:
                 </div>
-                <div className="flex items-center mx-4">
+                <div className="flex items-center mx-4 w-full justify-center">
                     <button
                         className="hover:scale-105 cursor-pointer transition-transform duration-300"
                         disabled={
@@ -162,7 +165,7 @@ export const PriceRange = ({
                         />
                     </button>
                 </div>
-                <div className="tracking-[.12em] ml-2 flex items-center">
+                <div className="hidden lg:flex tracking-[.12em] ml-2 items-center">
                     LAKE / {tokenSymbol}
                 </div>
             </div>

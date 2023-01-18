@@ -319,7 +319,9 @@ export const SecondStep = ({
                         inputValue={tokenInputValue}
                         isValueValid={isTokenValueValid}
                         setMaxInputValue={() =>
-                            onTokenValueChange(tokenBalance)
+                            onTokenValueChange(
+                                Math.round(tokenBalance * 10 ** 4) / 10 ** 4,
+                            )
                         }
                         onChange={(event: any) =>
                             onTokenValueChange(event.target.value || '')
@@ -331,7 +333,11 @@ export const SecondStep = ({
                         tokenPrice={lakePrice}
                         inputValue={lakeInputValue}
                         isValueValid={isLakeValueValid}
-                        setMaxInputValue={() => onLakeValueChange(lakeBalance)}
+                        setMaxInputValue={() =>
+                            onLakeValueChange(
+                                Math.round(lakeBalance * 10 ** 4) / 10 ** 4,
+                            )
+                        }
                         onChange={(event: any) =>
                             onLakeValueChange(event.target.value || '')
                         }
